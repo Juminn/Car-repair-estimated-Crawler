@@ -10,7 +10,7 @@ import java.io.IOException;
 public class Test {
     public static void test() throws IOException {
 
-        String crawlingURL = "https://www.mobis-as.com/simple_search_partLoad.do?pageIndex=1&hkgb=H&vtyp=P&catSeq=886227&srchType=normal&inText=%EC%97%94%EC%A7%84d";
+        String crawlingURL = "https://www.mobis-as.com/simple_search_partLoad.do?pageIndex=1&hkgb=H&vtyp=P&catSeq=890139&srchType=normal&inText=%EC%97%94%EC%A7%84";
 
         Document doc = Jsoup.connect(crawlingURL).get();
 
