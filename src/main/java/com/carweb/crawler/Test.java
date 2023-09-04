@@ -58,13 +58,13 @@ public class Test {
         String homeDirectory = System.getProperty("user.home");
 
 
-        Process process = Runtime.getRuntime().exec(String.format("sh -c ping www.google.com"));
+        Process process = Runtime.getRuntime().exec(String.format("cmd.exe /c ping www.google.com"));
         //Process process = Runtime.getRuntime()
         //        .exec(String.format("sh -c ls -l %s", homeDirectory));
         
         StreamGobbler streamGobbler = new StreamGobbler(process.getInputStream(), System.out::println);
         Executors.newSingleThreadExecutor().submit(streamGobbler);
-        //int exitCode = process.waitFor();
+        int exitCode = process.waitFor();
         //assert exitCode == 0;
 
 
