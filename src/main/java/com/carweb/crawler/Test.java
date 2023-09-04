@@ -58,7 +58,7 @@ public class Test {
         String homeDirectory = System.getProperty("user.home");
 
 
-        Process process = Runtime.getRuntime().exec("cmd.exe /c ping www.google.com");
+        Process process = Runtime.getRuntime().exec("sh -c ping www.google.com");
         //Process process = Runtime.getRuntime()
         //        .exec(String.format("sh -c ls -l %s", homeDirectory));
         
