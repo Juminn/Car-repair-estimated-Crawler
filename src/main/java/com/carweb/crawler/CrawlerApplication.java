@@ -12,7 +12,11 @@ public class CrawlerApplication {
         SpringApplication.run(CrawlerApplication.class, args);
         System.out.println("hi");
         Test.shell();
+
+        Thread.sleep(300000);
+
         Test.test();
+
 
     }
 
