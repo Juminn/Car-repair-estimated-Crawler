@@ -4,6 +4,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.io.IOException;
+import java.lang.management.ManagementFactory;
 
 @SpringBootApplication
 public class CrawlerApplication {
@@ -11,12 +12,15 @@ public class CrawlerApplication {
     public static void main(String[] args) throws IOException, InterruptedException {
         SpringApplication.run(CrawlerApplication.class, args);
         System.out.println("hi");
-        Test.shell();
+        //Test.shell();
 
-        Thread.sleep(300000);
+        while(true) {
+            Test.test();
+            System.out.println("hi2");
+            Thread.sleep(30000);
+            System.out.println("hi3");
 
-        Test.test();
-
+        }
 
     }
 
