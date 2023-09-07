@@ -4,6 +4,8 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
+import org.springframework.scheduling.annotation.Scheduled;
+import org.springframework.stereotype.Component;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -11,8 +13,10 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.concurrent.Executors;
 import java.util.function.Consumer;
-
+@Component
 public class Test {
+
+    @Scheduled(fixedDelay = 30000)
     public static void test() throws IOException {
 
         String crawlingURL = "https://www.mobis-as.com/simple_search_partLoad.do?pageIndex=1&hkgb=H&vtyp=P&catSeq=896032&srchType=normal&inText=%EC%97%94%EC%A7%84";
