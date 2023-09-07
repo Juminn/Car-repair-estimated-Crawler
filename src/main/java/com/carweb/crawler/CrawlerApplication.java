@@ -15,9 +15,9 @@ public class CrawlerApplication {
         //Test.shell();
 
         while(true) {
+            Thread.sleep(30000);
             Test.test();
             System.out.println("hi2");
-            Thread.sleep(30000);
             System.out.println("hi3");
 
         }
